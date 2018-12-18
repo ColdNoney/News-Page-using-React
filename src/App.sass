@@ -1,0 +1,99 @@
+*
+  box-sizing: border-box
+
+body
+  margin: 0
+  padding: 0
+
+.page
+  margin: 0
+
+.page-table
+  width: 80%
+  margin: auto
+
+.choice
+  width: 800px
+
+.button
+  background: #1AAB8A
+  color: #fff
+  border: none
+  position: relative
+  height: 60px
+  font-size: 1.5em
+  padding: 0 2em
+  cursor: pointer
+  transition: 800ms ease all
+  outline: none
+  margin: 15px 20px
+
+  &:hover
+    background: #fff
+    color: #1AAB8A
+
+    &::before, &::after
+        width: 100%
+        transition: 800ms ease all
+
+  &:before, &:after
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    height: 2px
+    width: 0
+    background: #1AAB8A
+    transition: 400ms ease all
+
+  &:after
+    right: inherit
+    top: inherit
+    left: 0
+    bottom: 0
+
+.table
+  margin: 40px auto
+  border: 4px groove #1AAB8A
+  padding: 10px
+
+.news
+  display: inline-flex
+  padding: 10px
+  width: 100%
+  border-bottom: 1px solid black
+
+  &:last-child
+    border-bottom: 0
+
+  .news-image
+    background-color: pink
+    width: 200px
+    height: 200px
+
+    img
+      width: 200px
+      height: 200px
+      border-radius: 10px
+
+  .news-details
+    padding: 0 20px
+    font-size: 200%
+    font-family: sans-serif
+    width: 100%
+
+    .news-title
+      text-align: center
+      height: 80%
+      padding: 0 2%
+
+    .news-description
+      font-size: 60%
+      padding: 0 5%
+
+      .author
+        float: left
+
+      .url
+        float: right
+        padding-right: 40px
